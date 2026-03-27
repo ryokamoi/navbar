@@ -1,0 +1,157 @@
+.navbar-centered {
+	justify-content: center;
+}
+
+.navbar-centered .navbar-menu {
+	flex-grow: 0;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-start-centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.publications-link {
+	display: block;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 0.84rem;
+	font-weight: 600;
+	color: #2160c4;
+}
+
+.publications-link:hover {
+	color: #184791;
+	text-decoration: underline;
+}
+
+.navbar-start-centered .has-dropdown {
+	position: relative;
+}
+
+.navbar-category-title {
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: #2160c4;
+}
+
+.navbar-dropdown {
+	--research-name-col: 100px;
+	--research-badges-col: 220px;
+	min-width: 760px;
+	left: 50%;
+	right: auto;
+	transform: translateX(-50%);
+}
+
+.research-link {
+	display: grid;
+	grid-template-columns: var(--research-name-col) var(--research-badges-col) 1fr;
+	column-gap: 0.75rem;
+	align-items: center;
+}
+
+.research-name {
+	font-weight: 600;
+	color: #222;
+}
+
+.research-badges {
+	display: flex;
+	gap: 0.4rem;
+	flex-wrap: wrap;
+}
+
+.research-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.15rem 0.45rem;
+	border-radius: 0.45rem;
+	border: 1px solid #b8c6f2;
+	background-color: #eef2ff;
+	color: #2a3f8f;
+	font-size: 0.68rem;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+.research-badge::before {
+	content: "";
+}
+
+/* Badge color presets: add one of these classes to .research-badge */
+.badge-training-data {
+	border-color: #8fc2ff;
+	background-color: #e9f4ff;
+	color: #155a96;
+}
+
+.badge-training-data::before {
+	content: "Training Data";
+}
+
+.badge-model {
+	border-color: #b5a4ff;
+	background-color: #f1ecff;
+	color: #4a2c9b;
+}
+
+.badge-model::before {
+	content: "Model";
+}
+
+.badge-benchmark {
+	border-color: #98d8a4;
+	background-color: #ecf9ef;
+	color: #23663d;
+}
+
+.badge-benchmark::before {
+	content: "Benchmark";
+}
+
+.badge-dataset {
+	border-color: #f1c58a;
+	background-color: #fff4e8;
+	color: #8a4d06;
+}
+
+.badge-dataset::before {
+	content: "Dataset";
+}
+
+.badge-vision {
+	border-color: #a7d4cf;
+	background-color: #eaf8f6;
+	color: #1f5f56;
+}
+
+.badge-vision::before {
+	content: "Vision";
+}
+
+.research-desc {
+	color: #4a4a4a;
+	font-size: 0.82rem;
+	line-height: 1.35;
+}
+
+@media screen and (max-width: 900px) {
+	.navbar-dropdown {
+		min-width: 0;
+		left: 0;
+		transform: none;
+	}
+
+	.research-link {
+		grid-template-columns: 1fr;
+		row-gap: 0.35rem;
+	}
+}
