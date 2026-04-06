@@ -1,0 +1,222 @@
+
+.more-research-centered {
+	justify-content: center;
+	font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	--fs-base: 0.88rem;
+	--fs-small: 0.76rem;
+	--fs-badge: 0.64rem;
+}
+
+.more-research-centered .more-research-menu {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.more-research-start-centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: relative;
+}
+
+.more-research-start-centered .has-dropdown {
+	position: static;
+}
+
+.more-research-category-title {
+	padding: 0.7rem 1rem 0.35rem;
+	font-size: var(--fs-base);
+	font-weight: 700;
+	color: #2160c4;
+	text-align: left;
+}
+
+.more-research-dropdown {
+	display: none;
+	position: absolute;
+	top: calc(100% - 1px);
+	left: 50%;
+	transform: translateX(-50%);
+	--research-name-col: 100px;
+	--research-badges-col: 220px;
+	min-width: 760px;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+	z-index: 10;
+	box-sizing: border-box;
+}
+
+.more-research-item.has-dropdown:hover > .more-research-dropdown,
+.more-research-item.has-dropdown:focus-within > .more-research-dropdown {
+	display: block;
+}
+
+.more-research-link {
+	display: inline-flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	min-width: 154px;
+	height: 34px;
+	padding: 0 1.8rem 0 1rem;
+	border: 0;
+	border-bottom: 1px solid #d7d7d7;
+	color: #5a5a5a;
+	font-size: var(--fs-base);
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.more-research-link::after {
+	content: "";
+	position: absolute;
+	right: 0.75rem;
+	top: 50%;
+	width: 0.45rem;
+	height: 0.45rem;
+	border-right: 2px solid #2f72dc;
+	border-bottom: 2px solid #2f72dc;
+	transform: translateY(-58%) rotate(45deg);
+}
+
+.research-link {
+	display: grid;
+	grid-template-columns: var(--research-name-col) var(--research-badges-col) 1fr;
+	column-gap: 0.75rem;
+	align-items: center;
+	justify-items: center;
+	padding: 0.35rem 1rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+.research-link .research-name {
+	justify-self: start;
+}
+
+.research-link .research-desc {
+	justify-self: start;
+}
+
+.research-name {
+	font-size: var(--fs-base);
+	font-weight: 600;
+	color: #222;
+}
+
+.research-badges {
+	display: flex;
+	gap: 0.4rem;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	justify-self: start;
+	white-space: nowrap;
+}
+
+.research-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.15rem 0.45rem;
+	border-radius: 0.45rem;
+	border: 1px solid #b8c6f2;
+	background-color: #eef2ff;
+	color: #2a3f8f;
+	font-size: var(--fs-badge);
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+.research-badge::before {
+	content: "";
+}
+
+/* Badge color presets: add one of these classes to .research-badge */
+.badge-training-data {
+	border-color: #8fc2ff;
+	background-color: #e9f4ff;
+	color: #155a96;
+}
+
+.badge-training-data::before {
+	content: "Training Data";
+}
+
+.badge-model {
+	border-color: #b5a4ff;
+	background-color: #f1ecff;
+	color: #4a2c9b;
+}
+
+.badge-model::before {
+	content: "Model";
+}
+
+.badge-benchmark {
+	border-color: #98d8a4;
+	background-color: #ecf9ef;
+	color: #23663d;
+}
+
+.badge-benchmark::before {
+	content: "Benchmark";
+}
+
+.badge-dataset {
+	border-color: #f1c58a;
+	background-color: #fff4e8;
+	color: #8a4d06;
+}
+
+.badge-dataset::before {
+	content: "Dataset";
+}
+
+.badge-vision {
+	border-color: #a7d4cf;
+	background-color: #eaf8f6;
+	color: #1f5f56;
+}
+
+.badge-vision::before {
+	content: "Vision";
+}
+
+.research-desc {
+	color: #4a4a4a;
+	font-size: var(--fs-base);
+	line-height: 1.35;
+	text-align: left;
+}
+
+.more-research-divider {
+	margin: 0.4rem 0;
+	border: 0;
+	border-top: 1px solid #ececec;
+	height: 0;
+}
+
+.publications-link {
+	display: block;
+	padding: 0.8rem 1rem 0.95rem;
+	border-top: 1px solid #ececec;
+	color: #2160c4;
+	text-align: center;
+	font-size: var(--fs-base);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.publications-link:hover {
+	text-decoration: underline;
+}

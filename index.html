@@ -4,17 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Navbar Demo</title>
-  <link rel="stylesheet" href="bulma.min.css">
-  <link rel="stylesheet" href="navbar-custom.css">
+  <link rel="stylesheet" href="more-research-custom.css">
 </head>
 
 <body>
-<div id="navbar"></div>
+<div id="more-research"></div>
 <script>
-  fetch('navbar.html')
+  fetch('more-research.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('navbar').innerHTML = data;
+      document.getElementById('more-research').innerHTML = data;
     });
 </script>
 </body>
