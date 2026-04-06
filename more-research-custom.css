@@ -42,7 +42,8 @@
 	transform: translateX(-50%);
 	--research-name-col: 100px;
 	--research-badges-col: 220px;
-	min-width: 760px;
+	width: 760px;
+	max-width: calc(100vw - 1rem);
 	background: #fff;
 	border: 1px solid #d9d9d9;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
@@ -219,4 +220,26 @@
 
 .publications-link:hover {
 	text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+	.research-link {
+		grid-template-columns: 100px 1fr;
+		grid-template-areas:
+			"name badges"
+			"desc desc";
+		row-gap: 0.35rem;
+	}
+
+	.research-link .research-name {
+		grid-area: name;
+	}
+
+	.research-badges {
+		grid-area: badges;
+	}
+
+	.research-link .research-desc {
+		grid-area: desc;
+	}
 }
